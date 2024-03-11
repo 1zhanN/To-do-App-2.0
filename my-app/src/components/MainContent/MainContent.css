@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -77,7 +78,7 @@ ul li::before{
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image: url(D:\projects_collab\To-do-App-2.0\my-app\src\images\unchecked.png);
+    background-image: url(../../images/unchecked.png);
     background-size: cover;
     background-position: center;
     top: 12px;
@@ -89,7 +90,7 @@ ul li.checked{
     text-decoration: line-through;
 }
 ul li.checked::before{
-    background-image: url(D:\projects_collab\To-do-App-2.0\my-app\src\images\checked.png);
+    background-image: url(../../images/checked.png);
 }
 
 .cross-button{
