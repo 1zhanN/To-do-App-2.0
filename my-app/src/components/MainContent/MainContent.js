@@ -20,11 +20,17 @@ const MainContent = () => {
 
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      addTask();
+    }
+  };
+  
   const removeTask = (id) => {
     const updatedTask = task.filter((element, index) => {
       return index !== id;
     });
-    
+
     setTask(updatedTask)
 
   };
@@ -34,9 +40,13 @@ const MainContent = () => {
       <div className="todo-app">
         <h2>To-Do List <img src="images/icon.png" alt=""/></h2>
         <div className="row">
-          <input type="text" id="input-box" placeholder=" Add your Task" 
+          <input 
+          type="text" 
+          id="input-box" 
+          placeholder=" Add your Task" 
           value={inputData}
           onChange={(e) => setInputData(e.target.value)}
+          onKeyDown={handleKeyDown} // Handle Enter key press
           />
           <button onClick={addTask}>Add</button>
         </div>
