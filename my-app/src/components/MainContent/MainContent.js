@@ -1,23 +1,17 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './MainContent.css';
 
 const MainContent = () => {
-  
   const [inputData, setInputData] = useState('');
-  const [task, setTask] = useState([]);
-
-
+  const [tasks, setTasks] = useState([]);
 
   const addTask = () => {
-    if (!inputData){
-      alert("abay khali pili nahi chalega")
+    if (!inputData) {
+      alert("Task cannot be empty!");
+    } else {
+      setTasks([...tasks, { text: inputData, checked: false }]);
+      setInputData('');
     }
-    else{
-      setTask([...task, inputData])
-      setInputData('')
-    
-    }
-
   };
 
   const handleKeyDown = (event) => {
@@ -25,45 +19,41 @@ const MainContent = () => {
       addTask();
     }
   };
-  
+
   const removeTask = (id) => {
-    const updatedTask = task.filter((element, index) => {
-      return index !== id;
-    });
+    const updatedTasks = tasks.filter((_, index) => index !== id);
+    setTasks(updatedTasks);
+  };
 
-    setTask(updatedTask)
-
+  const toggleTask = (index) => {
+    const updatedTasks = [...tasks];
+    updatedTasks[index].checked = !updatedTasks[index].checked;
+    setTasks(updatedTasks);
   };
 
   return (
     <div className="container">
       <div className="todo-app">
-        <h2>To-Do List <img src="images/icon.png" alt=""/></h2>
+        <h2>To-Do List <img src="images/icon.png" alt="" /></h2>
         <div className="row">
-          <input 
-          type="text" 
-          id="input-box" 
-          placeholder=" Add your Task" 
-          value={inputData}
-          onChange={(e) => setInputData(e.target.value)}
-          onKeyDown={handleKeyDown} // Handle Enter key press
+          <input
+            type="text"
+            id="input-box"
+            placeholder=" Add your Task"
+            value={inputData}
+            onChange={(e) => setInputData(e.target.value)}
+            onKeyDown={handleKeyDown} // Handle Enter key press
           />
           <button onClick={addTask}>Add</button>
         </div>
-        {
-          task.map((element, index) =>{
-            return(
-              <ul id="list-container" key={index}>
-              <li>{element}<span className="cross-button" onClick={() => removeTask(index)}>{'\u00d7'}</span></li>
-              
-              {/* <li>Task 2</li>
-              <li>Task 3</li> */}
-            </ul>
-            )
-
-          })
-        }
-
+        <ul id="list-container">
+          {tasks.map((task, index) => (
+            <li key={index} className={task.checked ? "checked" : ""} onClick={() => toggleTask(index)}>
+              <span className="task-text">{task.text}</span>
+              <span className="cross-button" onClick={(e) => { e.stopPropagation(); removeTask(index); }}>{'\u00d7'}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
