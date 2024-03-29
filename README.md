@@ -12,7 +12,7 @@ This React To-Do List app provides a minimalistic and intuitive interface for ma
 
 ## Demo
 
-Explore the [Live Demo](https://1zhann.github.io/React-To-do-App-2.0/) to interact with the app.
+Explore the [Live Demo](https://1zhann.github.io/React-To-do-App-2.0/) to interact with the app. [UNAVAILABLE RN]
 
 ## Usage
 
