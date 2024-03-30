@@ -22,5 +22,5 @@ Explore the [Live Demo](https://1zhann.github.io/React-To-do-App-2.0/) to intera
 
 ## Iterations
 
-![Iteration 1](screenshot1.png)
+![Iteration 1](images\screenshot1.png)
 
