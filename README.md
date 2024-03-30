@@ -5,7 +5,7 @@ This React To-Do List app provides a minimalistic and intuitive interface for ma
 ## Features
 
 - Add and manage tasks.
-- Save tasks in the browser's local storage for persistence.
+- Used States instead of Local Storage
 - Mark tasks as completed.
 - Delete tasks.
 - Simple and intuitive user interface.
@@ -22,5 +22,5 @@ Explore the [Live Demo](https://1zhann.github.io/React-To-do-App-2.0/) to intera
 
 ## Iterations
 
-### Iteration 1 (React Conversion)
+### Iteration 1 (React Conversion) 
 
