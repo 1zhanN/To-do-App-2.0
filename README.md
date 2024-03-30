@@ -21,6 +21,4 @@ Explore the [Live Demo](https://1zhann.github.io/React-To-do-App-2.0/) to intera
 3. **Delete a task:** Click the "X" button next to a task to remove it from the list.
 
 ## Iterations
-
-![Iteration 1](images\screenshot1.png)
-
+![Iteration 1 Screenshot](images/screenshot1.png)
