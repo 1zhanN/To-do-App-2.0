@@ -10,9 +10,9 @@ This React To-Do List app provides a minimalistic and intuitive interface for ma
 - Delete tasks.
 - Simple and intuitive user interface.
 
-## Demo
+## Demo (UNAVAILABLE RN)
 
-Explore the [Live Demo](https://1zhann.github.io/React-To-do-App-2.0/) to interact with the app. [UNAVAILABLE RN]
+Explore the [Live Demo](https://1zhann.github.io/React-To-do-App-2.0/) to interact with the app. 
 
 ## Usage
 
