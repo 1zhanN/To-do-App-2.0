@@ -22,5 +22,5 @@ Explore the [Live Demo](https://1zhann.github.io/React-To-do-App-2.0/) to intera
 
 ## Iterations
 
-### Iteration 1 (React Conversion) 
+![Iteration 1](screenshot1.png)
 
